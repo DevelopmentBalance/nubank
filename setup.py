@@ -18,7 +18,7 @@ setup(
     author_email="calenzodevs@gmail.com",
     license="MIT License",
     description=READ_ME,
-    long_description="Version of pynubank v2",
+    long_description="Version of balance_nubank v2",
     long_description_content_type="text/x-rst",
     install_requires=REQUIREMENTS,
     package_dir={"": "src"},

@@ -1,5 +1,5 @@
-from pynubank.exception import NuException
-from pynubank.utils.http import HttpClient
+from balance_nubank.exception import NuException
+from balance_nubank.utils.http import HttpClient
 
 DISCOVERY_URL = 'https://prod-s0-webapp-proxy.nubank.com.br/api/discovery'
 DISCOVERY_APP_URL = 'https://prod-s0-webapp-proxy.nubank.com.br/api/app/discovery'

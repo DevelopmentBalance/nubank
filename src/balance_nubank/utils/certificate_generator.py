@@ -2,9 +2,9 @@ import OpenSSL
 import requests
 from OpenSSL.crypto import X509
 
-from pynubank import NuException, NuRequestException
-from pynubank.utils.discovery import Discovery
-from pynubank.utils.http import HttpClient
+from balance_nubank import NuException, NuRequestException
+from balance_nubank.utils.discovery import Discovery
+from balance_nubank.utils.http import HttpClient
 
 
 class CertificateGenerator:
@@ -22,7 +22,7 @@ class CertificateGenerator:
     def request_code(self) -> str:
         response = requests.post(self.url, json=self._get_payload())
 
-        print('pynubank response ->', response)
+        print('balance_nubank response ->', response)
 
         if response.status_code == 401 or not response.headers.get('WWW-Authenticate'):
             raise NuException('Authentication code request failed.')

@@ -7,12 +7,12 @@ from deprecated import deprecated
 
 from qrcode import QRCode
 
-from pynubank.auth_mode import AuthMode, requires_auth_mode
-from pynubank.exception import NuMissingCreditCard
-from pynubank.utils.discovery import Discovery
-from pynubank.utils.graphql import prepare_request_body
-from pynubank.utils.http import HttpClient
-from pynubank.utils.parsing import parse_float, parse_pix_transaction, parse_generic_transaction
+from balance_nubank.auth_mode import AuthMode, requires_auth_mode
+from balance_nubank.exception import NuMissingCreditCard
+from balance_nubank.utils.discovery import Discovery
+from balance_nubank.utils.graphql import prepare_request_body
+from balance_nubank.utils.http import HttpClient
+from balance_nubank.utils.parsing import parse_float, parse_pix_transaction, parse_generic_transaction
 
 PAYMENT_EVENT_TYPES = (
     'TransferOutEvent',

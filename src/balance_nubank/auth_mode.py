@@ -1,7 +1,7 @@
 from enum import Enum
 from functools import wraps
 
-from pynubank.exception import NuInvalidAuthenticationMethod
+from balance_nubank.exception import NuInvalidAuthenticationMethod
 
 
 class AuthMode(Enum):

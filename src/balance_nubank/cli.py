@@ -5,8 +5,8 @@ from getpass import getpass
 
 from colorama import init, Fore, Style
 
-from pynubank import NuException
-from pynubank.utils.certificate_generator import CertificateGenerator
+from balance_nubank import NuException
+from balance_nubank.utils.certificate_generator import CertificateGenerator
 
 
 def generate_random_id() -> str:

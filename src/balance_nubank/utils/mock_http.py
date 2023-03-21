@@ -2,9 +2,9 @@ import fnmatch
 import json
 from pathlib import Path
 
-from pynubank import NuException
-from pynubank.utils.graphql import prepare_request_body
-from pynubank.utils.http import HttpClient
+from balance_nubank import NuException
+from balance_nubank.utils.graphql import prepare_request_body
+from balance_nubank.utils.http import HttpClient
 
 GHOSTFLAME_URL = 'https://mocked-proxy-url/api/proxy/ghostflame_123'
 

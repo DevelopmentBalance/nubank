@@ -1,7 +1,7 @@
 from requests import Response
 from requests_pkcs12 import get, post
 
-from pynubank import NuRequestException
+from balance_nubank import NuRequestException
 
 
 class HttpClient:
@@ -11,7 +11,7 @@ class HttpClient:
         self._headers = {
             'Content-Type': 'application/json',
             'X-Correlation-Id': 'and-7-86-2-1000005524.9twu3pgr',
-            'User-Agent': 'pynubank Client - https://github.com/andreroggeri/pynubank',
+            'User-Agent': 'balance_nubank Client - https://github.com/andreroggeri/pynubank',
         }
 
     def set_cert(self, cert_path: str):
