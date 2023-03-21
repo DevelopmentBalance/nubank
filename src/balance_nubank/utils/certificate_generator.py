@@ -20,17 +20,17 @@ class CertificateGenerator:
         self.url = discovery.get_app_url('gen_certificate')
 
     def request_code(self) -> str:
-        response = requests.post(self.url, json=self._get_payload())
+        try:
+            response = requests.post(self.url, json=self._get_payload())
 
-        print('balance_nubank response ->', response)
+            print('balance_nubank ->', response.json())
 
-        if response.status_code != 401 or not response.headers.get('WWW-Authenticate'):
+            parsed = self._parse_authenticate_headers(response.headers.get('WWW-Authenticate'))
+            self.encrypted_code = parsed.get('device-authorization_encrypted-code')
+            return parsed.get('sent-to')
+
+        finally:
             raise NuException('Authentication code request failed.')
-
-        parsed = self._parse_authenticate_headers(response.headers.get('WWW-Authenticate'))
-        self.encrypted_code = parsed.get('device-authorization_encrypted-code')
-
-        return parsed.get('sent-to')
 
     def exchange_certs(self, code: str):
         if not self.encrypted_code:
