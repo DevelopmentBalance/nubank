@@ -23,6 +23,7 @@ setup(
     install_requires=REQUIREMENTS,
     package_dir={"": "src"},
     packages=find_packages(where="src"),
+    package_data={'balance_nubank': ['queries/*.gql', 'utils/mocked_responses/*.json']},
     url="https://pypi.org/project/balance-service",
     classifiers=[
         "Programming Language :: Python :: 3.7",
